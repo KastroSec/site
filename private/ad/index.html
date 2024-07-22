@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Privada</title>
+    <script>
+        function verificarSenha() {
+            var senhaDigitada = document.getElementById("senha").value;
+            var senhaCorreta = "ADPentest2024Key";
+            
+            if (senhaDigitada === senhaCorreta) {
+                // Senha correta, exibir conteúdo
+                document.getElementById("conteudo").innerHTML = "<h2>Conteúdo de emails.txt:</h2>";
+                // Aqui você pode adicionar o conteúdo do arquivo emails.txt diretamente no HTML
+                // Para simplificar, vou mostrar apenas um exemplo de texto
+                document.getElementById("conteudo").innerHTML += "<p>Aqui está o conteúdo confidencial...</p>";
+            } else {
+                // Senha incorreta
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Área Privada</h1>
+    <p>Insira a senha para acessar:</p>
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="verificarSenha()">Entrar</button>
+    
+    <div id="conteudo"></div>
+</body>
+</html>
